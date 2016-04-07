@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Type" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Type::NeedInitialization" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>symboldatabase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="Type::BaseInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>symboldatabase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Struct Name="Type::FriendInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>symboldatabase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAgAAAAACSAAgAAAEQBAAEQAAABAAAAA=</HashCode>
+      <FileName>symboldatabase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Variable" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBIIAGAcgAAiAQAAiUhCQJhAAKFSFAk5AQEIAQBAqA=</HashCode>
+      <FileName>symboldatabase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Function" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADkJAMAgQnEkAAAAAGBERIMAgAgFDgEBhAAAIBQAgCw=</HashCode>
+      <FileName>symboldatabase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scope" Collapsed="true">
+    <Position X="3.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIBBhIiAQBAIGCAhomEAAEEAoAABQgAEAgAAABAAEEA=</HashCode>
+      <FileName>symboldatabase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SymbolDatabase" Collapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEJAAgABIAQCAAARioIAIgAgAFQAQgqAgAABCAAAAEA=</HashCode>
+      <FileName>symboldatabase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Dimension" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACACBAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>symboldatabase.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="AccessControl" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAEABAIAAAIQAAAAABQAA=</HashCode>
+      <FileName>symboldatabase.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
