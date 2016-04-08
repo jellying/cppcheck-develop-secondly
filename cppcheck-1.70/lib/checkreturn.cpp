@@ -14,11 +14,11 @@ void CheckReturn::checkType()
 
 	int hasreturn, isconst;
 	const SymbolDatabase *symbolDatabase = _tokenizer->getSymbolDatabase();
-	const Token *tok,* retok;
+	const Token *tok, *retok;
 	const std::size_t functions = symbolDatabase->functionScopes.size();
 	const Variable* var;
 	//遍历所有函数，包括类结构成员函数
-	for (std::size_t i = 0; i < functions; ++i) 
+	for (std::size_t i = 0; i < functions; ++i)
 	{
 		const Scope * scope = symbolDatabase->functionScopes[i];
 		const Function * func = scope->function;
@@ -56,15 +56,15 @@ void CheckReturn::checkType()
 			retok = retok->tokAt(2);
 		}
 		//找到return关键字
-		for (tok = scope->classStart; tok != scope->classEnd ; tok = tok->next())
+		for (tok = scope->classStart; tok != scope->classEnd; tok = tok->next())
 		{
 			if (tok->str() == "return")
 			{
 				hasreturn = 1;
 				tok = tok->next();
-				for (; tok->str() == "("; tok = tok->next());
+				for (; !(tok->isLiteral() || tok->isName()); tok = tok->next());
 				//判断是常数还是变量
-				if(!tok->isLiteral())
+				if (!tok->isLiteral())
 					var = tok->variable();
 				else
 				{
@@ -110,7 +110,7 @@ void CheckReturn::checkType()
 bool CheckReturn::isMatchType(const Token * tok, const Variable * var)
 {
 	//找到变量名前的声明类型
-	const Token* varType=var->nameToken()->previous();
+	const Token* varType = var->nameToken()->previous();
 	if (varType->str() == "*")
 	{
 		varType = varType->previous();
@@ -129,17 +129,17 @@ bool CheckReturn::isMatchType(const Token * tok, const Variable * var)
 			return false;
 		}
 	}
-	else if(tok->tokType()==1)
+	else if (tok->tokType() == 1)
 	{
 		//如果是类或结构类型返回值
-		if(tok->str()!=var->nameToken()->previous()->str())
+		if (tok->str() != var->nameToken()->previous()->str())
 		{
 			return false;
 		}
 	}
 	else if (tok->str() == "bool")
 	{
-		if (varType->str()!="bool" )
+		if (varType->str() != "bool")
 		{
 			return false;
 		}
@@ -192,14 +192,14 @@ bool CheckReturn::isMatchNum(const Token * tok, const Token * retok)
 	}
 	else if (retok->str() == "char")
 	{
-		if (tok->tokType()!=7)
+		if (tok->tokType() != 7)
 		{
 			return false;
 		}
 	}
 	else if (retok->str() == "string")
 	{
-		if (tok->tokType()!=6)
+		if (tok->tokType() != 6)
 		{
 			return false;
 		}

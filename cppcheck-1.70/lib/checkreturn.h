@@ -19,18 +19,19 @@ public:
 		CheckReturn checkReturn(tokenizer, settings, errorLogger);
 
 		// Checks
-		checkReturn.checkType();
+		//checkReturn.checkType();
 	}
 
 
 	void runSimplifiedChecks(const Tokenizer *tokenizer, const Settings *settings, ErrorLogger *errorLogger) {
-		CheckReturn CheckReturn(tokenizer, settings, errorLogger);
-		
+		CheckReturn checkReturn(tokenizer, settings, errorLogger);
+
+		checkReturn.checkType();
 
 	}
 
 
-	
+
 	//检查函数返回值类型不匹配问题
 	void checkType();
 
