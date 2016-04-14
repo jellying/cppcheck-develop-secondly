@@ -19,7 +19,8 @@ public:
 		CheckReturn checkReturn(tokenizer, settings, errorLogger);
 
 		// Checks
-		//checkReturn.checkType();
+		checkReturn.checkArgus();
+		checkReturn.checkRes();
 	}
 
 
@@ -35,6 +36,11 @@ public:
 	//检查函数返回值类型不匹配问题
 	void checkType();
 
+	//检查函数指针参数是否被被修改
+	void checkArgus();
+
+	//检查非资源性对象是否被更改
+	void checkRes();
 
 private:
 
